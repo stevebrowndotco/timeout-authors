@@ -7,6 +7,16 @@ angular.module('myApp.controller', [
 
     $scope.groups = [
         {
+            name: 'Jaz Joyne',
+            id: "node-7091",
+            role: "Editor"
+        },
+        {
+            name: 'Christina Izzo',
+            id: "node-7083",
+            role: "Editor"
+        },
+        {
             name: 'Joshua Rothkopf',
             id: "node-707",
             role: "Editor"
