@@ -11,7 +11,11 @@
 
 <!--</ul>-->
 
-<accordion close-others="oneAtATime">
+<accordion ng-show="!ordered" close-others="oneAtATime">
+    <span ng-show="!ordered" class="puul-right">
+        <a ng-click="reorder(true)" class="">edit</a>  
+    </span>
+
     <accordion-group ng-click="onClickRow(group.id)" ng-controller="GroupController" heading="{{group.name}}" ng-repeat="group in groups">
         <ul class="list-group" ng-repeat="venue in group.content">
             <li class="list-group-item">
@@ -25,3 +29,18 @@
         </ul>
     </accordion-group>
 </accordion>
+
+
+
+<div class="panel-group" ng-show="ordered" ui-sortable="sortableOptions" ng-click="onClickRow(group.id)" ng-controller="GroupController" >
+        <span ng-show="ordered" class="puul-right">
+        <a ng-click="reorder(false)" class="">close</a>  
+    </span>
+    <div class="panel  panel-default " ng-repeat="group in groups">
+       <div class=" panel-heading  panel-title ">
+        {{group.name}}
+           
+       </div>
+        
+    </div>
+</div>

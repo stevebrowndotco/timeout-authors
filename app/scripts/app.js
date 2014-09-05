@@ -14,7 +14,8 @@ var myApp = angular.module('myApp', [
     'angularFileUpload',
     'uxentrik-text-editor',
     'ngPrettyJson',
-    'myApp.controller'
+    'myApp.controller',
+    'ui.sortable'
 ])
   .config(['$routeProvider', '$locationProvider', '$httpProvider', '$tooltipProvider', function ( $routeProvider, $locationProvider) {
 
