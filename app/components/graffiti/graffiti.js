@@ -82,23 +82,27 @@ angular
             };
         }
 
-        function getTopVenues() {
+        function search(what, page, sort) {
             var requestParams = {
                 method: 'GET',
                 headers: getHeaders(),
-                endpoint: GRAFFITI.host +  basePath + 'london' + '/search',
+                endpoint: GRAFFITI.host +  basePath + 'uk-london' + '/search',
                 params: {
-                    what: 'canned-restaurants',
-                    page_size: 100
+                    what: what,
+                    page_size: page,
+                    facets: true,
+                    locale: 'en-GB',
+                    sort: sort
                 }
             };
+
             return request(requestParams);
         }
 
         return {
             client              :       client,
             token               :       getGraffitiToken,
-            topVenues           :       getTopVenues
+            search              :       search
         };
 
     });

@@ -1,3 +1,27 @@
-<ul ng-repeat="venue in venues">
-    <li>{{venue.name}}</li>
-</ul>
+<!--<ul class="list-group" ng-repeat="category in categories">-->
+    <!--<li ng-click="onClickRow(category.id)" class="list-group-item">-->
+        <!--<h2>{{category.name}}</h2>-->
+        <!--<ul ng-repeat="child in categoryChildren">-->
+            <!--<li>-->
+                <!--<h3>{{child.name}}</h3>-->
+                <!--<p>{{child.description}}</p>-->
+            <!--</li>-->
+        <!--</ul>-->
+    <!--</li>-->
+
+<!--</ul>-->
+
+<accordion close-others="oneAtATime">
+    <accordion-group ng-click="onClickRow(group.id)" ng-controller="GroupController" heading="{{group.name}}" ng-repeat="group in groups">
+        <ul class="list-group" ng-repeat="venue in group.content">
+            <li class="list-group-item">
+                <div class="thumbnail pull-left" style=" margin-right: 10px;width: 100px; height: 100px; background-size: cover;" ng-style="{'background-image' : 'url('+venue.image_url+')'}">
+
+                </div>
+
+                <h3>{{venue.name}}</h3>
+                <p>{{venue.description}}</p>
+            </li>
+        </ul>
+    </accordion-group>
+</accordion>
