@@ -1,12 +1,14 @@
+<div class="page-intro">
+    <h2>You are following({{groups.length}}) categories</h2>
+    </div>
+
+
 <accordion close-others="oneAtATime">
-    <accordion-group ng-click="onClickRow(group.id)" ng-controller="GroupController" heading="{{group.name}}" ng-repeat="group in groups">
+    <accordion-group ng-class="group.id" ng-click="onClickRow(group.id)" ng-controller="GroupController" heading="{{group.name}}" ng-repeat="group in groups">
         <ul class="list-group" ng-repeat="venue in group.content">
-            <li class="list-group-item">
-
-
-                <div ng-if="venue.image_url" class="thumbnail pull-left" style=" margin-right: 10px;width: 100px; height: 100px; background-size: cover;" ng-style="{'background-image' : 'url('+venue.image_url+')'}">
+            <li class="list-group-item" class="clearfix">
+                <div ng-if="venue.image_url" class="thumbnail pull-left" ng-style="{'background-image' : 'url('+venue.image_url+')'}">
                 </div>
-
                 <h3>{{venue.name}}</h3>
                 <p>{{venue.description}}</p>
             </li>

@@ -1,8 +1,0 @@
-<section ng-init="findOne()">
-    <h2>{{blog.title}} <a ng-show="editAllowed" href="/blogs!edit!{{blog._id}}">edit</a></h2>
-     <ux-teditor textarea-id="blog" textarea-class="col-xs-12"  textarea-height="480px" textarea-name="textareaQuestion" textarea-required textarea-editmode="false" ng-model="blog.content" enable-bootstrap-title="false" ></ux-teditor>
-
-        <span class="badge badge-success">Posted {{blog.created | date:'medium'}}</span>
-        <div class="pull-right"><span class="badge badge-success">Posted by {{blog.creator.username}}</span></div>
-    </div>
-</section>	

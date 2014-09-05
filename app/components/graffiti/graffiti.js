@@ -82,7 +82,10 @@ angular
             };
         }
 
-        function search(what, page, sort) {
+        function search(what, page, sort, locale) {
+            if(what === 'node-7073') {
+                sort = null;
+            }
             var requestParams = {
                 method: 'GET',
                 headers: getHeaders(),
@@ -91,7 +94,7 @@ angular
                     what: what,
                     page_size: page,
                     facets: true,
-                    locale: 'en-GB',
+                    locale: locale,
                     sort: sort
                 }
             };
