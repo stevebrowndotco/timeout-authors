@@ -1,0 +1,98 @@
+<style>
+	.list {
+		list-style: none outside none;
+		margin: 10px 0 30px;
+	}
+
+	.item {
+		/*width: 200px;*/
+		padding: 5px 10px;
+		margin: 5px 0;
+		border: 2px solid #444;
+		border-radius: 5px;
+		background-color: #EA8A8A;
+
+		font-size: 1.1em;
+		font-weight: bold;
+		text-align: center;
+		cursor: move;
+	}
+
+
+	/***  Extra ***/
+
+
+
+	.logList {
+		margin-top: 20px;
+		width: 250px;
+		min-height: 200px;
+		padding: 5px 15px;
+		border: 5px solid #000;
+		border-radius: 15px;
+	}
+
+	.logList:before {
+		content: 'log';
+		padding: 0 5px;
+		position: relative;
+		top: -1.1em;
+		background-color: #FFF;
+	}
+
+
+
+	h2 {
+		text-align: center;
+	}
+
+	.floatleft {
+		float: left;
+	}
+
+	.clear {
+		clear: both;
+	}
+</style>
+
+
+<div ng-controller="CtrlSortable" class="container">
+  <h2>ui.sortable event order</h2>
+
+  <div>
+    <ul ui-sortable="sortableOptions" ng-model="list" class="list">
+      <li ng-repeat="item in list" class="item">
+      	<div class="row">
+      		<div class="col-xs-3">   {{item.popolarity}}</div>
+      		<div class="col-xs-9">   {{item.name}}</div>
+
+      	</div>
+     
+      </li>
+    </ul>
+  </div>
+
+  <div style="margin-left: 20px;">
+    <ul class="list logList">
+      <li ng-repeat="entry in sortingLog track by $index" class="logItem">
+        {{entry}}
+      </li>
+    </ul>
+  </div>
+  
+  <div class="clear"></div>
+
+</div>
+	<script  src="script/controllers/angular-ui-components/CtrlSortable.js"></script> 
+
+
+
+
+
+<!-- Developing Notes:
+
+ng-model is required, so that the directive knows which model to update.
+ui-sortable element should only contain one ng-repeat and not any other elements (above or below).
+Otherwise the index matching of the generated DOM elements and the ng-model's items will break.
+In other words: The items of ng-model must match the indexes of the generated DOM elements.
+ui-sortable lists containing many 'types' of items can be implemented by using dynamic template loading with ng-include or a loader directive, to determine how each model item should be rendered. -->

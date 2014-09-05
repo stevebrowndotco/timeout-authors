@@ -1,0 +1,126 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>       <html lang="en" ng-app="myApp" class="no-js"><![endif]-->
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Xntrik</title>
+
+    <link rel="stylesheet" href="../../styles/bootstrap.min.css"> <!-- load bootstrap css -->
+    <link rel="stylesheet" href="../../styles/font-awesome.min.css">    
+
+    <link rel="stylesheet" href="../../styles/colorpicker.css"/>
+    <link rel="stylesheet" href="../../styles/ng-ckeditor.css"/>
+
+
+    <link rel="stylesheet" href="../../styles/app.css"/>
+
+     </head>
+<!--[if lt IE 7]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    
+<!--[if lt IE 9]>
+    <script src="../../scripts/lib/es5-shim/es5-shim.js"></script>
+    <script src="../../scripts/lib/json3/lib/json3.min.js"></script>
+    <![endif]-->
+<body ng-app="myApp" >
+    <div ng-include="'partials/navbar.html'">  
+        
+    </div>
+    <div class="container-fluid"    ng-click="navCollapsed=true" >
+        <div class="container" ng-view="">
+            
+        </div>   
+    </div>
+
+
+    <script type="text/javascript" src="../../scripts/lib/jquery.js"></script>
+
+    <script type="text/javascript" src="../../scripts/lib/underscore.js"></script>
+    
+    <script type="text/javascript" src="../../scripts/lib/angular-file-upload-shim.min.js"></script>
+
+    <script type="text/javascript" src="../../scripts/lib/angular.js"></script>
+    <script type="text/javascript" src="../../scripts/lib/angular-resource.js"></script>
+    <script type="text/javascript" src="../../scripts/lib/angular-cookies.js"></script>
+    <script type="text/javascript" src="../../scripts/lib/angular-sanitize.js"></script>
+    <script type="text/javascript" src="../../scripts/lib/angular-route.js"></script>
+    <script type="text/javascript" src="../../scripts/lib/angular-mocks.js"></script>
+    
+    <script type="text/javascript" src="../../scripts/lib/angular-file-upload.js"></script>
+
+    <script type="text/javascript" src="../../scripts/lib/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../scripts/lib/ui-bootstrap.js"></script>
+    <script type="text/javascript" src="../../scripts/lib/ui-bootstrap-tpls.js"></script>
+    
+    <script type="text/javascript" src="../../scripts/lib/d3.min.js"></script>
+
+    <script type="text/javascript" src="../../scripts/lib/sortable.js"></script><!-- optional -->
+    <script type="text/javascript" src="../../scripts/lib/jquery-ui.min.js"></script><!-- optional -->
+    <script type="text/javascript" src="../../scripts/lib/angular-animate.js"></script><!-- optional -->
+
+    <script type="text/javascript" src="../../scripts/lib/http-auth-interceptor.js"></script>
+    <script type="text/javascript" src='../../scripts/lib/ng-infinite-scroll.min.js'></script><!-- optional -->
+    
+
+    <script type="text/javascript" src='../../scripts/lib/x2js.js'></script>
+
+ 
+   
+    <script type="text/javascript" src='../../scripts/lib/bootstrap-colorpicker-module.js'></script>
+
+
+
+
+   <!--  -->
+
+
+    <!-- custom -->
+    <script type="text/javascript" src="../../scripts/app.js"></script>
+   
+    <script type="text/javascript" src="../../scripts/controllers/CtrlMain.js"></script>
+    <script type="text/javascript" src="../../scripts/controllers/CtrlLogin.js"></script>
+    <script type="text/javascript" src="../../scripts/controllers/CtrlNavbar.js"></script>
+    <script type="text/javascript" src="../../scripts/controllers/CtrlSignup.js"></script>
+    <script type="text/javascript" src="../../scripts/controllers/CtrlBlogs.js"></script>
+  
+    <script type="text/javascript" src="../../scripts/controllers/d3/CtrlD3ChartBar.js"></script> 
+    <script type="text/javascript" src="../../scripts/controllers/d3/CtrlD3ChartBarBasic.js"></script> 
+    <script type="text/javascript" src="../../scripts/controllers/d3/CtrlD3.js"></script> 
+    <script type="text/javascript" src="../../scripts/controllers/d3/CtrlD3chartbarhorizontal.js"></script> 
+    <script type="text/javascript" src="../../scripts/controllers/d3/CtrlD3chartGanttGlastonbury.js"></script> 
+    <script type="text/javascript" src="../../scripts/controllers/ViewCtrl.js"></script> 
+    <script type="text/javascript" src="../../scripts/controllers/CtrlPaginationRemoteData.js"></script> 
+    <script type="text/javascript" src="../../scripts/controllers/CtrlInfinityPagination.js"></script> 
+    <script type="text/javascript" src="../../scripts/controllers/CtrlCalc.js"></script> 
+
+
+     <script type="text/javascript" src="../../scripts/controllers/angular-ui-components/CtrlAccordion.js"></script>
+     <script type="text/javascript" src="../../scripts/controllers/angular-ui-components/CtrlAlert.js"></script>
+
+    <!-- angular directive -->
+    <script type="text/javascript" src="../../scripts/directives/onFocus.js"></script>
+    <script type="text/javascript" src="../../scripts/directives/mongooseError.js"></script>
+    <script type="text/javascript" src="../../scripts/directives/uniqueUsername.js"></script>
+    <script type="text/javascript" src='../../scripts/directives/uxentrik-text-editor.js'></script>
+    <script type="text/javascript" src='../../scripts/directives/ng-PrettyJson.js'></script>
+   
+    <!-- angular Services -->
+    <script type="text/javascript" src="../../scripts/services/AuthService.js"></script>
+    <script type="text/javascript" src="../../scripts/services/UserService.js"></script>
+    <script type="text/javascript" src="../../scripts/services/Du-utilsService.js"></script>
+    <script type="text/javascript" src="../../scripts/services/SessionService.js"></script>
+    <script type="text/javascript" src="../../scripts/services/BlogsService.js"></script>
+    <script type="text/javascript" src="../../scripts/services/ViewsService.js"></script>
+    <script type="text/javascript" src="../../scripts/services/CollsService.js"></script>
+    <script type="text/javascript" src="../../scripts/services/DocsService.js"></script>
+    
+    </body>
+</html>

@@ -1,0 +1,69 @@
+<section>
+    <form class="form-horizontal" ng-submit="create()">
+        <div class="form-group">
+            <label class="control-label" for="title">Title</label>
+            <div class="controls">
+                <input type="text" ng-model="title" class="form-control" id="title" placeholder="Title" required="" class="form-control">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="content">Content</label>
+       
+            <div class="controls">
+                <textarea ng-model="content"  text-angular="text-angular" class="form-control" id="content" rows="10" placeholder="Content"></textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="controls">
+                <button type="submit" class="btn btn-primary pull-right">Submit</button>
+            </div>
+        </div>
+    </form>
+    <div class="form-group">
+        <label for="photos">Input Picture</label>
+        <button class="btn btn-default btn-file" id="photos" type="file"  ng-file-select="onFileSelect($files)">upload Image</button>
+        <p class="help-block">Select pictures</p>
+        <div ng-repeat="file in files" class="container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width:{{file.progress}}%;">
+                    {{file.name}} : {{file.progress}}
+                </div>
+            </div>
+            <button class="btn btn-ttc" type="button" ng-click="abort($index)" ng-show="file.progress != 100">Abort</button>
+        </div>
+    </div>
+    <div ng-repeat="image in images">
+        <img class="img-thumb" ng-src="{{image.location}}"/>
+        <p>file: {{image.fileName}}</p>
+    </div> 
+    <button ng-click="save()">save</button>
+
+
+
+
+   <div ng-show="currentUser.preference.debugging && debugging" class="debugging debugging-pos" >
+    
+        debugging: <i class="pull-right glyphicon" ng-click="debugging=!debugging" ng-class="{'glyphicon-close': debugging, 'glyphicon-close-right': !debugging}">x</i>
+     
+        blog{{blog}}
+        
+
+
+        images{{images}}
+
+        <div ng-init="todolist=true" ng-show="todolist" >
+            <h5><span>todo List</span><span  class="btn" ng-click="todolist=false"> [x]</span></h5>
+            <ul>
+                <li></li>
+            </ul>
+        </div>  
+
+        
+        <div >
+        </div>
+    </div>
+
+
+
+
+</section>

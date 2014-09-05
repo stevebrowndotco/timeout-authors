@@ -1,0 +1,79 @@
+<style>
+rect {
+  fill: steelblue;
+  stroke:black;
+  shape-rendering: crispEdges;
+}
+.axis path, .axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+} 
+text {
+  fill: black;
+  font: 10px sans-serif;
+  
+}
+dot{
+  fill:lightblue;
+  stroke:#999999;
+}
+
+div.theChart {
+  overflow: scroll;
+}
+line {
+  stroke: hsl(0, 2%, 76%);   
+}
+
+path.domain {
+  fill: none;
+  stroke: black;
+  shape-rendering: crispEdges;
+}
+
+.scrollingGantt{
+ 
+  height: 500px !important;
+  width: 800px !important;
+  border-top: 1px solid hsl(0, 0%, 70%);
+  border-bottom: 1px solid hsl(0, 0%, 70%);
+}
+rect.pane {
+  cursor: move;
+  fill: none;
+  stroke:none;
+  pointer-events: all;
+  shape-rendering: crispEdges;
+}
+
+
+
+.artistName{
+  overflow:hidden;
+  font-size: 10px;
+  line-height: 1em;
+  padding: 2px;
+  -ms-word-break: break-all;
+  word-break: break-all;
+
+  /* Non standard for webkit */
+  word-break: break-word;
+
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+
+</style>
+<div ng-controller="CtrlD3chartGanttGlastonbury">
+  <h1>Glastonbury 2014 Line up</h1>
+
+    <button class="btn btn-primary" ng-click="normalize()">normalize</button>
+    <!-- <dud3gantt data='myData'></dud3gantt> -->
+
+
+</div>
+
+

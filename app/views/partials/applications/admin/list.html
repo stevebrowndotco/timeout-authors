@@ -1,0 +1,159 @@
+<p class="text-center" ng-show="loading">
+	<span class="fa fa-spinner fa-spin fa-3x"></span>
+</p>
+
+<br/>
+<!-- views -->
+<accordion>
+	<accordion-group is-open="status.accordionViewOpen" ng-init="updateViewsList()">
+		<accordion-heading >
+			<div>
+				Views: {{view.name}}<i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.accordionViewOpen, 'glyphicon-chevron-right': !status.accordionViewOpen}"></i>
+			</div>
+
+		</accordion-heading>
+		<div class="sm-pad-bt">
+			<div class="btn-toolbar " role="toolbar">
+				<div class="btn-group pull-right">
+					<a ng-show="!editViewsListMode && views.length>0" class="" ng-click="editViewsList(true)">Edit</a>
+					<a ng-show="editViewsListMode" class="" ng-click="editViewsList(false)">Close</a>
+				</div>
+			</div>
+		</div>
+
+
+		<ul class="list-group">
+
+			<!-- fields entered -->
+			<li class="list-group-item col-xs-12" ng-repeat="view in views">
+
+				<a class="col-xs-12" <a ng-href="admin-view!{{view._id}}" ng-show="!editViewsListMode">
+					<h4 class="list-group-item-heading pad-5">{{view.name}}</h4>
+					<p class="list-group-item-text gray-80">{{view.description}}</p>	
+				</a>
+
+				<!-- edit list item mode-->
+				<div class="col-xs-10" ng-show="editViewMode && editViewsListMode && view._id==editViewId" >
+					<span class=" col-xs-5">
+						<input type="text" ng-model="view.name" class="form-control col-md-5" id="title" placeholder="Title" required="" class="form-control">
+					</span>
+					<span class=" col-xs-5">
+						<textarea ng-model="view.description" class="form-control" id="description" rows="1" placeholder="description">{{newView.description}}</textarea>
+					</span>
+				</div>
+
+				<!-- editViewsListMode -->
+				<div class="col-xs-9  col-sm-10  col-md-11 col-lg-11"  ng-show="editViewsListMode">
+					<h4 class="list-group-item-heading pad-5">{{view.name}}</h4>
+					<p class="list-group-item-text gray-80">{{view.description}}</p>	
+				</div>
+
+				<div class="pull-right pad-5-r" ng-show="editViewsListMode && !editViewMode">
+					<button class="btn btn-danger " ng-click="deleteView(view)">Delete</button>
+				</div>
+
+			</li>
+
+		</ul>	
+		<div>
+			<div class="pad-5-r" ng-show="editViewsListMode && !editViewMode && views.length>0">
+					<button class="btn btn-danger " ng-click="deleteAllView()">Delete ALL views</button>
+			</div>
+		</div>
+		<div class="controls pull-right">
+			<button ng-show="!showCreateView&&!editViewsListMode" class="btn btn-primary " ng-click="showCreateViewToggle(true)">New View</button>
+		</div>		
+		<div class="panel panel-default animate-show" ng-show="showCreateView&&!editViewsListMode">
+			<div class="panel-heading">
+				<h3 class="panel-title">New View</h3>
+			</div>
+			<div class="panel-body">
+
+				<div class="col-md-5 form-group">
+					<label class="control-label" for="title">Title</label>
+					<div class="controls">
+						<input type="text" ng-model="newView.name" class="form-control" id="title" placeholder="Title" required="" class="form-control">
+					</div>
+				</div>
+				<div class="col-md-5 form-group">
+					<label class="control-label" for="Description">Description</label>
+					<div class="controls">
+						<textarea ng-model="newView.description" class="form-control" id="content" rows="1" placeholder="Content">{{newView.description}}</textarea>
+					</div>
+				</div>
+
+
+
+				<div class="col-md-2 form-group">
+					<label class="control-label" for="Description"></label>
+					<div class="controls">
+						<button type="submit"  ng-click="createViewSubmit(newView)" class="btn btn-primary">Submit</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- create a new view -->
+
+	</accordion-group>
+</accordion>
+
+
+
+<!-- debugging -->
+
+
+<div ng-show="currentUser.preference.debugging && debugging" class="debugging debugging-pos" >
+	$scope.status{{status}}
+	debugging: <i class="pull-right glyphicon" ng-click="debugging=!debugging" ng-class="{'glyphicon-close': debugging, 'glyphicon-close-right': !debugging}">x</i>
+	todolist{{todolist}}
+	<div ng-init="todolist=true" ng-show="todolist" >
+		<h5><span>todo List</span><span  class="btn" ng-click="todolist=false"> [x]</span></h5>
+		<ul>
+			<li>delete collection from the db when delete in the ui</li>
+		</ul>
+	</div>	
+
+	
+	<div >showView: {{showView}}
+	</div>
+
+
+
+	<!-- <div>showFieldsList:{{showFieldsList}}</div>
+	<br>
+	<div>docs:{{docs}}</div>
+	<br>
+	<div>view.:{{view}}</div>
+	<br>
+	
+	<br>
+	<div class="form-group">
+        <label for="photos">Input Picture</label>
+        <input class="btn btn-default btn-file" id="photos" type="file"  ng-file-select="onFileSelect($files)" multiple>
+        <p class="help-block">Select pictures</p>
+        <div ng-repeat="file in files" class="container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width:{{file.progress}}%;">
+                    {{file.name}} : {{file.progress}}
+                </div>
+            </div>
+            <button class="btn btn-ttc" type="button" ng-click="abort($index)" ng-show="file.progress != 100">Abort</button>
+        </div>
+    </div>
+    <div ng-repeat="imageUpload in imageUploads">
+    	<img class="img-thumb" ng-src="{{imageUpload.location}}"/>
+		<p>file: {{imageUpload.fileName}}</p>
+    </div> -->
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
