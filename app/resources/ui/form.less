@@ -1,0 +1,24 @@
+input, textarea {
+  .timeout-form-control
+}
+
+.timeout-form-control {
+  &.form-control {
+    border-radius: 1px;
+    padding: 10px;
+    height: auto;
+    margin: 0 0 10px 0;
+    padding: 10px;
+    &.tight {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.input-error {
+  border: 1px solid @red;
+}
+
+input.gigya-error, input.ng-invalid {
+  .input-error
+}

@@ -1,0 +1,257 @@
+@font-face {
+  font-family: 'FranklinGothicLTCom-Dm';
+  src: url('/fonts/FranklinGothicLTCom-Dm.eot');
+  src: local('â˜º'), url('/fonts/timeout/FranklinGothicLTCom-Dm/font.woff') format('woff'), url('/fonts/timeout/FranklinGothicLTCom-Dm/font.ttf') format('truetype'), url('/fonts/timeout/FranklinGothicLTCom-Dm/font.svg#webfont') format('svg');
+}
+
+@font-face {
+  font-family: 'FranklinGothicLTCom-Bk';
+  src: url('/fonts/timeout/FranklinGothicLTCom-Bk/font.eot');
+  src: url('/fonts/timeout/FranklinGothicLTCom-Bk/font.eot?#iefix') format('embedded-opentype'), url('/fonts/timeout/FranklinGothicLTCom-Bk/font.woff') format('woff'), url('/fonts/timeout/FranklinGothicLTCom-Bk/font.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal
+}
+
+@font-face {
+  font-family: 'CenturyOSMTPro-Italic';
+  src: url('/fonts/timeout/CenturyOSMTPro-Italic/font.eot');
+  src: local('â˜º'), url('/fonts/timeout/CenturyOSMTPro-Italic/font.woff') format('woff'), url('/fonts/timeout/CenturyOSMTPro-Italic/font.ttf') format('truetype'), url('/fonts/timeout/CenturyOSMTPro-Italic/font.svg#webfont') format('svg')
+}
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
+
+body {
+  font-family: 'Open Sans',arial,'serif';
+}
+
+h1 {
+  color: @dull-black;
+  word-wrap: break-word;
+  line-height: 1.1em;
+  display: block;
+  font-family: 'FranklinGothicLTCom-Dm', arial, 'serif';
+  font-size: 45px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.header-label {
+  text-transform: uppercase;
+  color: @dull-white;
+}
+
+h2 {
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+
+h3 {
+  .header-label;
+  font-size:13px;
+  display: inline;
+  margin: 0;
+  .glyphicon {
+    color: @red;
+    display: inline-block;
+    text-align: center;
+  }
+
+  strong {
+    color: lighten(@dull-black, 30%);
+  }
+}
+
+h1, h2, h3 {
+  word-wrap: break-word;
+  line-height: 1.1em;
+  display: block;
+  &.light {
+    font-family: 'FranklinGothicLTCom-Bk',arial,'serif';
+  }
+}
+
+a {
+  color: @blue;
+
+  &:hover {
+    color: @light-blue;
+    text-decoration: none;
+  }
+
+}
+
+header {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  .venue-name {
+    color: @grey;
+    font-size: 13px;
+    font-weight: bold;
+  }
+  a {
+    color: #f1f1f1;
+    font-weight: bold;
+  }
+}
+
+label {
+  color: #111;
+}
+
+.timeout-panel {
+  label {
+    display: block;
+    color: #9C9C9C;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 13px;
+  }
+  h2 {
+    margin: 0 0 10px 0;
+  }
+}
+
+.analytics-value {
+  font-size: 30px;
+  display: block;
+  font-weight: bold;
+  font-family: FranklinGothicLTCom-Bk, arial, sans-serif;
+  letter-spacing: -2px;
+  text-align: center;
+  &.large {
+    font-size: 42px;
+  }
+}
+
+.analytics-label {
+  .header-label;
+  display: block;
+  text-align: center;
+  font-size: 13px;
+}
+
+.text-nugget {
+  color: @body-text-faint;
+  font-size: 16px;
+  padding: 10px;
+  border: 1px solid @grey;
+  border-radius: 1px;
+  font-size: 14px;
+  word-wrap: break-word;
+  .glyphicon {
+    font-size: 10px;
+  }
+  &.tight {
+    margin-bottom: 0;
+    border-bottom: none;
+    margin-top: -1px;
+  }
+}
+
+.avatar-container {
+  p {
+    color: #D8D8D8;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: right;
+    &.sub-info {
+      color: #5D5D5D;
+      font-size: 12px;
+      text-align: right;
+    }
+  }
+}
+
+.edit-text {
+  opacity: 0.6;
+  cursor: pointer;
+  margin: 0;
+  .transition(opacity 0.1s linear);
+  &:hover {
+    opacity: 1;
+  }
+  .glyphicon {
+    font-size: 11px;
+  }
+}
+
+.release {
+  color: @white;
+  z-index: 999;
+  position: fixed;
+  opacity: 0.4;
+  bottom: 0;
+  right: 0;
+  padding: 10px;
+  margin: 0;
+}
+
+.venue-title {
+  font-size: 30px;
+  color: @white;
+  text-shadow: 1px 1px 0px rgba(0,0,0,0.6);
+}
+
+.venue-info {
+  text-shadow: 1px 1px 0px rgba(0,0,0,0.6);
+  color: @off-white;
+}
+
+.legend {
+  color: @dull-white;
+  text-transform: uppercase;
+  font-size: 13px;
+  line-height: 1.1em;
+}
+
+.tooltip {
+  font-size: 13px;
+  text-transform: none;
+}
+
+.footer {
+  h4 {
+    font-family: FranklinGothicLTCom-Dm, arial, serif;
+    color: @white;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  a {
+    color: darken(@grey,20%);
+    &:hover {
+      color: @yellow;
+    }
+  }
+  .sub-footer {
+    p {
+      color: darken(@dull-white, 20%);
+    }
+  }
+
+}
+
+.form-error-msg {
+  color: @red;
+  font-size: 14px;
+}
+
+.gigya-screen .gigya-error-msg {
+  .form-error-msg;
+}
+
+.account-container {
+  h1  {
+    margin: 10px 0;
+    line-height: 1.4;
+  }
+  .forgot-password {
+    margin: 6px 0 0 0;
+    display: inline-block;
+  }
+}
+
+.why {
+  border-bottom: 1px dotted @black;
+  cursor: pointer;
+}

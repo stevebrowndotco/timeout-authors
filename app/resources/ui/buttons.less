@@ -1,0 +1,37 @@
+.timeout-button {
+  background: @light-blue;
+  padding: 5px 8px;
+  text-transform: none;
+  color: #fff;
+  border: none;
+  border-radius: 0;
+  &.large {
+    padding: 16px;
+    font-size: 16px;
+  }
+  &:hover, &:active, &:focus {
+    color: #fff;
+  }
+  &.success {
+    &:hover {
+      background: @mid-blue;
+    }
+  }
+  &.green {
+    background: @light-green;
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.2);
+    &:hover {
+      background: darken(@light-green, 5%);
+    }
+  }
+  &.danger {
+    background: @red;
+    &:hover {
+      background: @mid-red;
+    }
+  }
+  &.center {
+    margin: auto;
+  }
+
+}
