@@ -1,28 +1,27 @@
 'use strict';
 
-var myApp =angular.module('myApp', [
-  'ngCookies',
-  'ngResource',
-  'ngSanitize',
-  'ngRoute',
-  'http-auth-interceptor',
-  'ui.bootstrap',
-  'du-utils',
-  'infinite-scroll',//optional
-  'ui.sortable',//optional
-  'underscore',
-  'angularFileUpload',
-'uxentrik-text-editor',
-'ngPrettyJson',
-
- 
+var myApp = angular.module('myApp', [
+    'ngCookies',
+    'ngResource',
+    'ngSanitize',
+    'ngRoute',
+    'http-auth-interceptor',
+    'ui.bootstrap',
+    'du-utils',
+    'infinite-scroll',//optional
+    'ui.sortable',//optional
+    'underscore',
+    'angularFileUpload',
+    'uxentrik-text-editor',
+    'ngPrettyJson',
+    'myApp.controller'
 ])
-  .config(['$routeProvider', '$locationProvider', '$httpProvider', '$tooltipProvider', function ( $routeProvider, $locationProvider, $tooltipProvider) {
+  .config(['$routeProvider', '$locationProvider', '$httpProvider', '$tooltipProvider', function ( $routeProvider, $locationProvider) {
 
 
     $routeProvider
       .when('/', {
-        templateUrl: 'partials/main.html',
+        templateUrl: 'partials/list.html',
         controller: 'MainCtrl'
       })
       // PROFILE SECTION =========================
