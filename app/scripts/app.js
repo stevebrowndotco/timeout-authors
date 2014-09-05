@@ -5,7 +5,9 @@ var myApp = angular.module('myApp', [
     'ngSanitize',
     'ngRoute',
     'ui.bootstrap',
-    'myApp.controller'
+    'myApp.controller',
+    'ui.sortable'
+
 ])
   .config(['$routeProvider', '$locationProvider', '$httpProvider', '$tooltipProvider', function ( $routeProvider, $locationProvider) {
 
