@@ -2,8 +2,9 @@
     <accordion-group ng-click="onClickRow(group.id)" ng-controller="GroupController" heading="{{group.name}}" ng-repeat="group in groups">
         <ul class="list-group" ng-repeat="venue in group.content">
             <li class="list-group-item">
-                <div class="thumbnail pull-left" style=" margin-right: 10px;width: 100px; height: 100px; background-size: cover;" ng-style="{'background-image' : 'url('+venue.image_url+')'}">
 
+
+                <div ng-if="venue.image_url" class="thumbnail pull-left" style=" margin-right: 10px;width: 100px; height: 100px; background-size: cover;" ng-style="{'background-image' : 'url('+venue.image_url+')'}">
                 </div>
 
                 <h3>{{venue.name}}</h3>
