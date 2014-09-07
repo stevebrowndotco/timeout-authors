@@ -2,13 +2,20 @@
 
 angular.module('myApp.controller', [
     'pp.graffiti',
-     'ui.sortable'
+    'ui.sortable',
+    'ngTouch'
 ])
 .controller('MainCtrl', function ($scope, graffiti) {
-    $scope.ordered=false;
-    $scope.reorder=function(bool) {
-        $scope.ordered=bool;
-        console.log("$scope.ordered:",$scope.ordered);
+    $scope.editing=false;
+    $scope.editingClick=function(bool) {
+        $scope.editing=bool;
+        if ( $scope.editing==false) {
+           console.log("$scope.editing:",$scope.editing);
+           var delIcons=angular.element.find(".delete-label")
+           console.log("delIcons:",delIcons);
+          /* delIcons.addClass('ng-hide')*/
+        };
+
     };
     
     $scope.groups = [
@@ -35,23 +42,13 @@ angular.module('myApp.controller', [
     });
     $scope.oneAtATime = true;
 
-    var tmpList = [];
-
-    for (var i = 1; i <= 6; i++){
-        tmpList.push({
-          text: 'Item ' + i,
-          value: i
-      });
-    }
-
-    $scope.list = tmpList;
 })
 
 .controller('GroupController', function ($scope, graffiti) {
     $scope.onClickRow = function(id) {
         graffiti.search(id, null, 'posted-at-date', 'en-GB').then(function(response) {
             $scope.group.content = response.body;
-            console.log($scope.group.content)
+           
         })
     };
 })
