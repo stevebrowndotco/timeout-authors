@@ -5,7 +5,12 @@ angular.module('myApp.controller', [
      'ui.sortable'
 ])
 .controller('MainCtrl', function ($scope, graffiti) {
-
+    $scope.ordered=false;
+    $scope.reorder=function(bool) {
+        $scope.ordered=bool;
+        console.log("$scope.ordered:",$scope.ordered);
+    };
+    
     $scope.groups = [
         {
             name: 'Jaz Joyne',
