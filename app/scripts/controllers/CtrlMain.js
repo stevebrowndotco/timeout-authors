@@ -1,7 +1,8 @@
 'use strict';
 
 angular.module('myApp.controller', [
-    'pp.graffiti'
+    'pp.graffiti',
+     'ui.sortable'
 ])
 .controller('MainCtrl', function ($scope, graffiti) {
 
@@ -28,6 +29,17 @@ angular.module('myApp.controller', [
         })
     });
     $scope.oneAtATime = true;
+
+    var tmpList = [];
+
+    for (var i = 1; i <= 6; i++){
+        tmpList.push({
+          text: 'Item ' + i,
+          value: i
+      });
+    }
+
+    $scope.list = tmpList;
 })
 
 .controller('GroupController', function ($scope, graffiti) {
@@ -38,3 +50,4 @@ angular.module('myApp.controller', [
         })
     };
 })
+
