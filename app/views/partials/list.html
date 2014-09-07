@@ -16,11 +16,16 @@
 </accordion>
 
 
-<div >
 
-    <ul ui-sortable ng-model="list" class="list">
-      <li ng-repeat="item in list" class="item">
-        {{item.text}}
-      </li>
-    </ul> 
+
+<div>
+    <div ui-sortable ng-model="groups" class="panel-group " >
+        <div ng-repeat="group in groups" class=" panel panel-default" ng-class="group.id">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    {{group.name}}
+                </h4> 
+            </div> 
+        </div>
+    </div> 
 </div>
