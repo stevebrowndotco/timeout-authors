@@ -6,29 +6,32 @@ angular.module('myApp.controller', [
     'ngTouch'
 ])
 .controller('MainCtrl', function ($scope, graffiti) {
- $scope.hideTrash=false;
+    $scope.hideTrash=false;
+
     $scope.sortableOptions = {
         axis: 'y'
     };
-$scope.showActionsSwipe=function(bool,groupId) {
-    if (bool){
-        $scope.groupId=groupId
-        $scope.showActions=true;
-    }else{
-         $scope.showActions=false;
-    }
-};
+
+    $scope.showActionsSwipe=function(bool,groupId) {
+        if (bool){
+            $scope.groupId=groupId
+            $scope.showActions=true;
+        }else{
+             $scope.showActions=false;
+        }
+    };
+
     $scope.editing=false;
 
     $scope.editingClick=function(bool) {
         $scope.editing=bool;
 
-         $scope.showActions=false;
+        $scope.showActions=false;
         if ( $scope.showActions==true) {
-            
-           console.log("$scope.hideTrash:",$scope.hideTrash);
 
-           
+            console.log("$scope.hideTrash:",$scope.hideTrash);
+
+
         };
         console.log("$scope:",$scope);
     };
@@ -36,11 +39,6 @@ $scope.showActionsSwipe=function(bool,groupId) {
     $scope.delete=function(index) {
         $scope.groups.splice(index, 1);
     };
-
-
-
-
-
 
     $scope.groups = [
         {
