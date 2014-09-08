@@ -10,14 +10,23 @@ angular.module('myApp.controller', [
     $scope.editingClick=function(bool) {
         $scope.editing=bool;
         if ( $scope.editing==false) {
-           console.log("$scope.editing:",$scope.editing);
+           
            var delIcons=angular.element.find(".delete-label")
-           console.log("delIcons:",delIcons);
+           
           /* delIcons.addClass('ng-hide')*/
         };
 
     };
     
+    $scope.delete=function(index) {
+        $scope.groups.splice(index, 1);
+    };
+
+
+
+
+
+
     $scope.groups = [
         {
             name: 'Jaz Joyne',
