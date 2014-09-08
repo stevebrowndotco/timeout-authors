@@ -6,136 +6,87 @@ body {
 
 .page-intro {
   & {
-    margin: 20px 0;
-  }
-  h2 {
+    max-width: 500px;
     border-bottom: 2px solid @black;
+    margin: 0 auto 20px;
+  }
+
+  h2 {
+
   }
 }
 
-.panel-group .panel {
-
-  & {
-    border-radius: 1px;
-    .panel-heading {
-      border-left-color: red;
-      border-left-width: 5px;
-      border-left-style: solid;
-
-    }
-  }
-
-  &.node-7087	{
-    .panel-heading {
-      border-left-color: #5DAFBE;
-    }
-  }
-  &.node-7083	{
-    .panel-heading{
-      border-left-color: #FAAA2C;
-    }
-
-  }
-  &.node-7067	{
-    .panel-heading{
-      border-left-color: #FAAA2C;
-    }
-
-  }
-  &.node-7065 {
-    .panel-heading{
-      border-left-color: #ED5471;
-    }
-
-  }
-  &.node-7089	{
-    .panel-heading{
-      border-left-color: #C62744;
-    }
-
-  }
-
-  &.node-7081	{
-    .panel-heading {
-      border-left-color: #1756A0;
-    }
-
-  }
-  &.node-7091 {
-    .panel-heading{
-      border-left-color: #92C160;
-    }
-
-  }
-  &.node-7095 {
-    .panel-heading{
-      border-left-color: #92C160;
-    }
-
-  }
-  &.node-7097 {
-    .panel-heading{
-      border-left-color: #92C160;
-    }
-
-  }
-  &.node-7069 {
-    .panel-heading{
-      border-left-color: #A42B87;
-    }
-
-  }
-  &.node-7073 {
-    .panel-heading{
-      border-left-color: #813087;
-    }
-
-  }
-  &.node-7103 {
-    .panel-heading{
-      border-left-color: #813087;
-    }
-
-  }
-  &.node-7071 {
-    .panel-heading{
-      border-left-color: #00A192;
-    }
-
-  }
-
-  .panel-heading {
-    background: @white;
-    padding: 15px;
-
-    border-radius: 0;
-  }
-  .thumbnail {
-    margin-right: 10px;
-    width: 150px;
-    height: 150px;
-    background-size: cover;
-    border: none;
-    border-radius: 0;
-  }
-  h4 a {
-    cursor: pointer;
-  }
-  h3 {
-    font-size: 2.4rem;
-    color: @dull-black;
-    margin-bottom: 10px;
-    font-weight: 500;
-    text-transform: none;
-    font-family: 'FranklinGothicLTCom-Dm';
-  }
-  .list-group-item {
-    .clearfix;
-  }
-
+.reader {
+  max-width: 500px;
+  margin: auto;
 }
 
-.delete-label{
+.panel-group {
+    margin: 0;
+    padding: 0;
+
+  .panel {
+
+    & {
+      border-radius: 1px;
+      padding: 0;
+      margin: 0;
+      .panel-heading {
+        border-left-color: red;
+        border-left-width: 5px;
+        border-left-style: solid;
+      }
+    }
+
+    .panel-heading {
+      background: @white;
+      padding: 15px;
+
+      border-radius: 0;
+    }
+    .thumbnail {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 250px;
+      background-size: cover;
+      border: none;
+      border-radius: 0;
+      position: relative;
+      .category {
+        position: absolute;
+        display: block;
+        background: red;
+        color: #fff;
+        padding: 3px 5px;
+        border-radius: 5px 5px 0 0;
+        bottom: 0;
+        left: 15px;
+        margin: 0;
+      }
+    }
+    .content {
+      padding: 20px;
+    }
+    h4 a {
+      cursor: pointer;
+    }
+    h3 {
+      font-size: 2.4rem;
+      color: @dull-black;
+      margin-bottom: 10px;
+      font-weight: 500;
+      text-transform: none;
+      font-family: 'FranklinGothicLTCom-Dm';
+    }
+    .list-group-item {
+      .clearfix;
+    }
+
+  }
+}
+
+.delete-label {
   float: right;
   background: hsl(0, 100%, 50%);
   padding: 16px 30px;
@@ -144,13 +95,25 @@ body {
   border: 0;
   bottom: 0px;
 }
+
 .glyphicon-delete {
   color: white;
 }
-.btn-edit{
-  font-size: 12px;
+
+.btn-edit {
+  display: block;
 }
-.icon-move{
+
+.switch-view {
+  font-size: 21px;
+  display: block;
+  margin-top: 22px;
+  cursor: pointer;
+  a {
+    color: @black;
+  }
+}
+.icon-move {
   width: 30px;
   height: 16px;
   background-repeat: no-repeat;
@@ -159,17 +122,115 @@ body {
   background-size: 100%;
   z-index: 99;
 }
-.ng-hide{
+
+.ng-hide {
   display: none;
 }
 
-.page-intro.ng-scope {
-    line-height: 0.428571;
-}
 a.btn-edit {
-    padding: 10px 10px;
-    cursor: pointer;
+  padding: 10px 10px;
+  cursor: pointer;
 }
 .panel-heading .editing {
-    cursor: move;
+  cursor: move;
 }
+
+
+
+//Colors
+
+&.node-7087 {
+  .panel-heading {
+    border-left-color: #5DAFBE;
+  }
+}
+&.node-7083 {
+  .panel-heading {
+    border-left-color: #FAAA2C;
+  }
+
+}
+&.node-7067 {
+  .panel-heading {
+    border-left-color: #FAAA2C;
+  }
+
+}
+&.node-7065 {
+  .panel-heading {
+    border-left-color: #ED5471;
+  }
+
+}
+&.node-7089 {
+  .panel-heading {
+    border-left-color: #C62744;
+  }
+
+}
+
+&.node-7081 {
+  .panel-heading {
+    border-left-color: #1756A0;
+  }
+
+}
+&.node-7091 {
+  .panel-heading {
+    border-left-color: #92C160;
+  }
+
+}
+&.node-7095 {
+  .panel-heading {
+    border-left-color: #92C160;
+  }
+
+}
+&.node-7097 {
+  .panel-heading {
+    border-left-color: #92C160;
+  }
+
+}
+&.node-7069 {
+  .panel-heading {
+    border-left-color: #A42B87;
+  }
+
+}
+&.node-7073 {
+  .panel-heading {
+    border-left-color: #813087;
+  }
+
+}
+&.node-7103 {
+  .panel-heading {
+    border-left-color: #813087;
+  }
+
+}
+&.node-7071 {
+  .panel-heading {
+    border-left-color: #00A192;
+  }
+}
+<<<<<<< HEAD
+
+//Color Vars
+@node-7087: #5DAFBE;
+@node-7083: #FAAA2C;
+@node-7067: #FAAA2C;
+@node-7065: #ED5471;
+@node-7089: #C62744;
+@node-7081: #1756A0;
+@node-7091: #92C160;
+@node-7095: #92C160;
+@node-7097: #92C160;
+@node-7069: #A42B87;
+@node-7073: #813087;
+@node-7103: #813087;
+@node-7071: #00A192;
+
+
