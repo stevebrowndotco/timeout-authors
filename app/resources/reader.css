@@ -6530,6 +6530,16 @@ body {
   max-width: 500px;
   margin: auto;
 }
+.reader h3 {
+  text-indent: 40px;
+  line-height: 1.3;
+}
+.reader .author-avatar {
+  top: 14px;
+}
+.reader .content {
+  position: relative;
+}
 .panel-group {
   margin: 0;
   padding: 0;
@@ -6545,9 +6555,12 @@ body {
   border-left-style: solid;
 }
 .panel-group .panel .panel-heading {
-  background: #ffffff;
   padding: 15px;
+  background: none;
   border-radius: 0;
+}
+.panel-group .panel .panel-heading.move-panel {
+  margin-right: 70px;
 }
 .panel-group .panel .thumbnail {
   margin: 0;
@@ -6618,7 +6631,7 @@ body {
 .switch-view {
   font-size: 21px;
   display: block;
-  margin-top: 22px;
+  margin-top: 10px;
   cursor: pointer;
 }
 .switch-view a {
@@ -6636,46 +6649,155 @@ body {
 .ng-hide {
   display: none;
 }
+a.btn-edit {
+  padding: 10px 10px;
+  cursor: pointer;
+}
+.panel-heading .editing {
+  cursor: move;
+}
+.author-list {
+  max-width: 500px;
+  margin: auto;
+}
+.author-list .panel-heading {
+  position: relative;
+}
+.author-list .author-avatar {
+  top: 7px;
+  left: 10px;
+}
+.author-list .panel-title {
+  padding-left: 40px;
+}
+.author-list .panel-title i {
+  font-size: 14px;
+  color: #666;
+}
+.author-avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  position: absolute;
+  background-size: cover;
+}
 .node-7087 .panel-heading {
-  border-left-color: #5DAFBE;
+  border-left-color: #5dafbe !important;
+}
+.node-7087 .category {
+  background: #5dafbe !important;
+}
+.node-7087 .content {
+  border-bottom: 3px solid #5dafbe !important;
 }
 .node-7083 .panel-heading {
-  border-left-color: #FAAA2C;
+  border-left-color: #faaa2c !important;
+}
+.node-7083 .category {
+  background: #faaa2c !important;
+}
+.node-7083 .content {
+  border-bottom: 3px solid #faaa2c !important;
 }
 .node-7067 .panel-heading {
-  border-left-color: #FAAA2C;
+  border-left-color: #faaa2c !important;
+}
+.node-7067 .category {
+  background: #faaa2c !important;
+}
+.node-7067 .content {
+  border-bottom: 3px solid #faaa2c !important;
 }
 .node-7065 .panel-heading {
-  border-left-color: #ED5471;
+  border-left-color: #ed5471 !important;
+}
+.node-7065 .category {
+  background: #ed5471 !important;
+}
+.node-7065 .content {
+  border-bottom: 3px solid #ed5471 !important;
 }
 .node-7089 .panel-heading {
-  border-left-color: #C62744;
+  border-left-color: #c62744 !important;
+}
+.node-7089 .category {
+  background: #c62744 !important;
+}
+.node-7089 .content {
+  border-bottom: 3px solid #c62744 !important;
 }
 .node-7081 .panel-heading {
-  border-left-color: #1756A0;
+  border-left-color: #1756a0 !important;
+}
+.node-7081 .category {
+  background: #1756a0 !important;
+}
+.node-7081 .content {
+  border-bottom: 3px solid #1756a0 !important;
 }
 .node-7091 .panel-heading {
-  border-left-color: #92C160;
+  border-left-color: #92c160 !important;
+}
+.node-7091 .category {
+  background: #92c160 !important;
+}
+.node-7091 .content {
+  border-bottom: 3px solid #92c160 !important;
 }
 .node-7095 .panel-heading {
-  border-left-color: #92C160;
+  border-left-color: #92c160 !important;
+}
+.node-7095 .category {
+  background: #92c160 !important;
+}
+.node-7095 .content {
+  border-bottom: 3px solid #92c160 !important;
 }
 .node-7097 .panel-heading {
-  border-left-color: #92C160;
+  border-left-color: #92c160 !important;
+}
+.node-7097 .category {
+  background: #92c160 !important;
+}
+.node-7097 .content {
+  border-bottom: 3px solid #92c160 !important;
 }
 .node-7069 .panel-heading {
-  border-left-color: #A42B87;
+  border-left-color: #a42b87 !important;
+}
+.node-7069 .category {
+  background: #a42b87 !important;
+}
+.node-7069 .content {
+  border-bottom: 3px solid #a42b87 !important;
 }
 .node-7073 .panel-heading {
-  border-left-color: #813087;
+  border-left-color: #813087 !important;
+}
+.node-7073 .category {
+  background: #813087 !important;
+}
+.node-7073 .content {
+  border-bottom: 3px solid #813087 !important;
 }
 .node-7103 .panel-heading {
-  border-left-color: #813087;
+  border-left-color: #813087 !important;
+}
+.node-7103 .category {
+  background: #813087 !important;
+}
+.node-7103 .content {
+  border-bottom: 3px solid #813087 !important;
 }
 .node-7071 .panel-heading {
-  border-left-color: #00A192;
+  border-left-color: #00a192 !important;
 }
-
-.hide-trash{
-  display:none;
+.node-7071 .category {
+  background: #00a192 !important;
+}
+.node-7071 .content {
+  border-bottom: 3px solid #00a192 !important;
+}
+.hide-trash {
+  display: none;
 }

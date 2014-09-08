@@ -1,6 +1,6 @@
 <div class="page-intro clearfix">
 
-    <h2 class="pull-left">You are following({{groups.length}}) authors</h2>
+    <h2 class="pull-left">{{groups.length}} authors</h2>
 
     <div class="switch-view pull-right">
                 <span ng-show="!editing" class="pull-right">
@@ -17,7 +17,7 @@
     <ul class="panel-group" ng-class="group.id" ng-show="!editing" ng-controller="GroupController"
          ng-repeat="group in groups">
 
-            <li ng-if="venue.description && venue.image_url" class="panel" ng-class="group.id" ng-repeat="venue in group.content">
+            <li ng-if="venue.description && venue.image_url" class="panel reader-panel" ng-class="group.id" ng-repeat="venue in group.content">
 
                 <div ng-if="venue.image_url" class="thumbnail clearfix"
                      ng-style="{'background-image' : 'url('+venue.image_url+')'}">
@@ -25,8 +25,7 @@
                 </div>
 
                 <div class="content">
-                    <h3>{{venue.name}}</h3>
-
+                    <div ng-style="{'background-image' : 'url(/user-images/'+group.image+')'}" class="author-avatar"></div> <h3>{{venue.name}}</h3>
                     <p>{{venue.description}}</p>
                 </div>
 
@@ -34,28 +33,28 @@
     </ul>
 </div>
 
-<div class="reader">
+<div class="author-list">
       
     <div ng-show="editing" ui-sortable="sortableOptions" ng-model="groups" class="panel-group " >
         <div ng-repeat="group in groups" ng-swipe-left="showActionsSwipe  (true,$index)" ng-swipe-right="showActionsSwipe (false)" class=" panel panel-default" ng-class="group.id">
+
             <div ng-show="showActions&& groupId==$index" ng-class="{ 'hide-trash' : hideTrash==true }"  class="delete-label" ng-click="delete($index)">
                 <i class="glyphicon glyphicon-trash glyphicon-delete pull-right"></i> 
             </div>
-            <div class="panel-heading editing"> 
-                 <div class="pull-right icon-cointainer ">
+
+            <div class="panel-heading editing" ng-class="{'move-panel' : showActions&& groupId==$index}">
+                <div class="pull-left author-avatar" ng-style="{'background-image' : 'url(/user-images/'+group.image+')'}">
+
+                </div>
+                 <div class="pull-right icon-container">
                     <div class="align-vertical">
 
                         <div class="icon-move"></div>  
                     </div>
-                      
-                 
-                    
-
-                                   
                  </div>
 
                 <h4 class="panel-title">
-                    {{group.name}}
+                    {{group.name}} <i>{{group.category}}</i>
                 </h4> 
                
 
