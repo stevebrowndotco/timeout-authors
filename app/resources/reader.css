@@ -6526,7 +6526,6 @@ body {
 }
 .page-intro h2 {
   border-bottom: 2px solid #000000;
-  display: inline-block;
 }
 .panel-group .panel {
   border-radius: 1px;
@@ -6615,9 +6614,9 @@ body {
 .panel-group .panel .list-group-item:after {
   clear: both;
 }
-.delete-label{
+.delete-label {
   float: right;
-  background: hsl(0, 100%, 50%);
+  background: #ff0000;
   padding: 16px 30px;
   margin: 0;
   margin-left: 15px;
@@ -6627,10 +6626,10 @@ body {
 .glyphicon-delete {
   color: white;
 }
-.btn-edit{
+.btn-edit {
   font-size: 12px;
 }
-.icon-move{
+.icon-move {
   width: 30px;
   height: 16px;
   background-repeat: no-repeat;
@@ -6639,6 +6638,6 @@ body {
   background-size: 100%;
   z-index: 99;
 }
-.ng-hide{
+.ng-hide {
   display: none;
 }
