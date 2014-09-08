@@ -17,7 +17,7 @@
     <ul class="panel-group" ng-class="group.id" ng-show="!editing" ng-controller="GroupController"
          ng-repeat="group in groups">
 
-            <li ng-if="venue.description && venue.image_url" class="panel" ng-class="group.id" ng-repeat="venue in group.content">
+            <li ng-if="venue.description && venue.image_url" class="panel reader-panel" ng-class="group.id" ng-repeat="venue in group.content">
 
                 <div ng-if="venue.image_url" class="thumbnail clearfix"
                      ng-style="{'background-image' : 'url('+venue.image_url+')'}">
@@ -38,10 +38,12 @@
       
     <div ng-show="editing" ui-sortable="sortableOptions" ng-model="groups" class="panel-group " >
         <div ng-repeat="group in groups" ng-swipe-left="showActionsSwipe  (true,$index)" ng-swipe-right="showActionsSwipe (false)" class=" panel panel-default" ng-class="group.id">
+
             <div ng-show="showActions&& groupId==$index" ng-class="{ 'hide-trash' : hideTrash==true }"  class="delete-label" ng-click="delete($index)">
                 <i class="glyphicon glyphicon-trash glyphicon-delete pull-right"></i> 
             </div>
-            <div class="panel-heading editing">
+
+            <div class="panel-heading editing" ng-class="{'move-panel' : showActions&& groupId==$index}">
                 <div class="pull-left author-avatar" ng-style="{'background-image' : 'url(/user-images/'+group.image+')'}">
 
                 </div>
