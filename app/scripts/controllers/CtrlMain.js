@@ -6,16 +6,23 @@ angular.module('myApp.controller', [
     'ngTouch'
 ])
 .controller('MainCtrl', function ($scope, graffiti) {
+
+    $scope.sortableOptions = {
+        axis: 'y'
+    };
+    
     $scope.editing=false;
+
     $scope.editingClick=function(bool) {
         $scope.editing=bool;
+         $scope.showActions=false;
         if ( $scope.editing==false) {
-           
+          
            var delIcons=angular.element.find(".delete-label")
            
           /* delIcons.addClass('ng-hide')*/
         };
-
+        console.log("$scope:",$scope);
     };
     
     $scope.delete=function(index) {
