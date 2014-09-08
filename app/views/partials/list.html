@@ -1,11 +1,21 @@
 <div class="page-intro">
-    <h2>You are following({{groups.length}}) categories</h2>
+
+    <h2 >You are following({{groups.length}}) categories 
+   
+    </h2>
+    <br class="show-md">
+            <span ng-show="!editing" class="pull-right">
+                <a ng-click="editingClick(true)" class="btn-edit">Edit</a>  
+        </span>
+        <span ng-show="editing" class="pull-right">
+                <a ng-click="editingClick(false)" class="btn-edit">Close</a>  
+        </span>
+    
 </div>
 
-<accordion ng-show="!ordered" close-others="oneAtATime">
-        <span ng-show="!ordered" class="puul-right">
-        <a ng-click="reorder(true)" class="">edit</a>  
-    </span>
+<accordion ng-show="!editing" close-others="oneAtATime">
+
+
     <accordion-group ng-class="group.id" ng-click="onClickRow(group.id)" ng-controller="GroupController" heading="{{group.name}}" ng-repeat="group in groups">
         <ul ng-if="venue.description && venue.image_url" class="list-group" ng-repeat="venue in group.content">
             <li class="list-group-item" class="clearfix">
@@ -20,15 +30,33 @@
 
 
 
-<div class="panel-group" ng-show="ordered" ui-sortable="sortableOptions" ng-click="onClickRow(group.id)" ng-controller="GroupController" >
-        <span ng-show="ordered" class="puul-right">
-        <a ng-click="reorder(false)" class="">close</a>  
-    </span>
-    <div class="panel  panel-default " ng-repeat="group in groups">
-       <div class=" panel-heading  panel-title ">
-        {{group.name}}
-           
-       </div>
-        
-    </div>
+
+<div> 
+      
+    <div ng-show="editing" ui-sortable ng-model="groups" class="panel-group " >
+        <div ng-repeat="group in groups" ng-swipe-left="showActions = true" ng-swipe-right="showActions = false" class=" panel panel-default" ng-class="group.id">
+            <div ng-show="showActions"  class="delete-label" ng-click="delete()">
+                <i class="glyphicon glyphicon-trash glyphicon-delete pull-right"></i> 
+            </div>
+            <div class="panel-heading"> 
+                 <div class="pull-right icon-cointainer ">
+                    <div class="align-vertical">
+
+                        <div class="icon-move"></div>  
+                    </div>
+                      
+                 
+                    
+
+                                   
+                 </div>
+
+                <h4 class="panel-title">
+                    {{group.name}}
+                </h4> 
+               
+
+            </div> 
+        </div>
+    </div> 
 </div>
