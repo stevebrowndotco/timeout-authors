@@ -13,22 +13,21 @@
     
 </div>
 
-<accordion ng-show="!editing" close-others="oneAtATime">
+<div class="reader">
+    <ul class="panel-group" ng-class="group.id" ng-show="!editing" ng-controller="GroupController"
+         ng-repeat="group in groups">
 
-
-    <accordion-group ng-class="group.id" ng-click="onClickRow(group.id)" ng-controller="GroupController" heading="{{group.name}}" ng-repeat="group in groups">
-        <ul ng-if="venue.description && venue.image_url" class="list-group" ng-repeat="venue in group.content">
-            <li class="list-group-item" class="clearfix">
-                <div ng-if="venue.image_url" class="thumbnail pull-left" ng-style="{'background-image' : 'url('+venue.image_url+')'}">
+            <li ng-if="venue.description && venue.image_url" class="panel" ng-repeat="venue in group.content">
+                <p class="category">{{group.name}}</p>
+                <div ng-if="venue.image_url" class="thumbnail pull-left"
+                     ng-style="{'background-image' : 'url('+venue.image_url+')'}">
                 </div>
                 <h3>{{venue.name}}</h3>
+
                 <p>{{venue.description}}</p>
             </li>
-        </ul>
-    </accordion-group>
-</accordion>
-
-
+    </ul>
+</div>
 
 
 <div> 

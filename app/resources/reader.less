@@ -13,129 +13,142 @@ body {
   }
 }
 
-.panel-group .panel {
-
-  & {
-    border-radius: 1px;
-    .panel-heading {
-      border-left-color: red;
-      border-left-width: 5px;
-      border-left-style: solid;
-
-    }
-  }
-
-  &.node-7087	{
-    .panel-heading {
-      border-left-color: #5DAFBE;
-    }
-  }
-  &.node-7083	{
-    .panel-heading{
-      border-left-color: #FAAA2C;
-    }
-
-  }
-  &.node-7067	{
-    .panel-heading{
-      border-left-color: #FAAA2C;
-    }
-
-  }
-  &.node-7065 {
-    .panel-heading{
-      border-left-color: #ED5471;
-    }
-
-  }
-  &.node-7089	{
-    .panel-heading{
-      border-left-color: #C62744;
-    }
-
-  }
-
-  &.node-7081	{
-    .panel-heading {
-      border-left-color: #1756A0;
-    }
-
-  }
-  &.node-7091 {
-    .panel-heading{
-      border-left-color: #92C160;
-    }
-
-  }
-  &.node-7095 {
-    .panel-heading{
-      border-left-color: #92C160;
-    }
-
-  }
-  &.node-7097 {
-    .panel-heading{
-      border-left-color: #92C160;
-    }
-
-  }
-  &.node-7069 {
-    .panel-heading{
-      border-left-color: #A42B87;
-    }
-
-  }
-  &.node-7073 {
-    .panel-heading{
-      border-left-color: #813087;
-    }
-
-  }
-  &.node-7103 {
-    .panel-heading{
-      border-left-color: #813087;
-    }
-
-  }
-  &.node-7071 {
-    .panel-heading{
-      border-left-color: #00A192;
-    }
-
-  }
-
-  .panel-heading {
-    background: @white;
-    padding: 15px;
-
-    border-radius: 0;
-  }
-  .thumbnail {
-    margin-right: 10px;
-    width: 150px;
-    height: 150px;
-    background-size: cover;
-    border: none;
-    border-radius: 0;
-  }
-  h4 a {
-    cursor: pointer;
-  }
-  h3 {
-    font-size: 2.4rem;
-    color: @dull-black;
-    margin-bottom: 10px;
-    font-weight: 500;
-    text-transform: none;
-    font-family: 'FranklinGothicLTCom-Dm';
-  }
-  .list-group-item {
-    .clearfix;
-  }
-
+.reader {
+  max-width: 600px;
+  margin: auto;
 }
 
-.delete-label{
+.panel-group {
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  .panel {
+
+    & {
+      border-radius: 1px;
+      padding: 0;
+      margin: 0;
+      .panel-heading {
+        border-left-color: red;
+        border-left-width: 5px;
+        border-left-style: solid;
+      }
+    }
+
+    &.node-7087 {
+      .panel-heading {
+        border-left-color: #5DAFBE;
+      }
+    }
+    &.node-7083 {
+      .panel-heading {
+        border-left-color: #FAAA2C;
+      }
+
+    }
+    &.node-7067 {
+      .panel-heading {
+        border-left-color: #FAAA2C;
+      }
+
+    }
+    &.node-7065 {
+      .panel-heading {
+        border-left-color: #ED5471;
+      }
+
+    }
+    &.node-7089 {
+      .panel-heading {
+        border-left-color: #C62744;
+      }
+
+    }
+
+    &.node-7081 {
+      .panel-heading {
+        border-left-color: #1756A0;
+      }
+
+    }
+    &.node-7091 {
+      .panel-heading {
+        border-left-color: #92C160;
+      }
+
+    }
+    &.node-7095 {
+      .panel-heading {
+        border-left-color: #92C160;
+      }
+
+    }
+    &.node-7097 {
+      .panel-heading {
+        border-left-color: #92C160;
+      }
+
+    }
+    &.node-7069 {
+      .panel-heading {
+        border-left-color: #A42B87;
+      }
+
+    }
+    &.node-7073 {
+      .panel-heading {
+        border-left-color: #813087;
+      }
+
+    }
+    &.node-7103 {
+      .panel-heading {
+        border-left-color: #813087;
+      }
+
+    }
+    &.node-7071 {
+      .panel-heading {
+        border-left-color: #00A192;
+      }
+
+    }
+
+    .panel-heading {
+      background: @white;
+      padding: 15px;
+
+      border-radius: 0;
+    }
+    .thumbnail {
+      margin-right: 10px;
+      width: 150px;
+      height: 150px;
+      background-size: cover;
+      border: none;
+      border-radius: 0;
+    }
+    h4 a {
+      cursor: pointer;
+    }
+    h3 {
+      font-size: 2.4rem;
+      color: @dull-black;
+      margin-bottom: 10px;
+      font-weight: 500;
+      text-transform: none;
+      font-family: 'FranklinGothicLTCom-Dm';
+    }
+    .list-group-item {
+      .clearfix;
+    }
+
+  }
+}
+
+.delete-label {
   float: right;
   background: hsl(0, 100%, 50%);
   padding: 16px 30px;
@@ -144,13 +157,16 @@ body {
   border: 0;
   bottom: 0px;
 }
+
 .glyphicon-delete {
   color: white;
 }
-.btn-edit{
+
+.btn-edit {
   font-size: 12px;
 }
-.icon-move{
+
+.icon-move {
   width: 30px;
   height: 16px;
   background-repeat: no-repeat;
@@ -159,6 +175,7 @@ body {
   background-size: 100%;
   z-index: 99;
 }
-.ng-hide{
+
+.ng-hide {
   display: none;
 }

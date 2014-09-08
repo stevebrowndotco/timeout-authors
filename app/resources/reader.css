@@ -6527,8 +6527,18 @@ body {
 .page-intro h2 {
   border-bottom: 2px solid #000000;
 }
+.reader {
+  max-width: 600px;
+  margin: auto;
+}
+.panel-group ul {
+  margin: 0;
+  padding: 0;
+}
 .panel-group .panel {
   border-radius: 1px;
+  padding: 0;
+  margin: 0;
 }
 .panel-group .panel .panel-heading {
   border-left-color: red;
