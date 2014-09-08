@@ -6,18 +6,34 @@ angular.module('myApp.controller', [
     'ngTouch'
 ])
 .controller('MainCtrl', function ($scope, graffiti) {
-    $scope.editing=false;
-    $scope.editingClick=function(bool) {
-        $scope.editing=bool;
-        if ( $scope.editing==false) {
-           console.log("$scope.editing:",$scope.editing);
-           var delIcons=angular.element.find(".delete-label")
-           console.log("delIcons:",delIcons);
-          /* delIcons.addClass('ng-hide')*/
-        };
 
+    $scope.sortableOptions = {
+        axis: 'y'
     };
     
+    $scope.editing=false;
+
+    $scope.editingClick=function(bool) {
+        $scope.editing=bool;
+         $scope.showActions=false;
+        if ( $scope.editing==false) {
+          
+           var delIcons=angular.element.find(".delete-label")
+           
+          /* delIcons.addClass('ng-hide')*/
+        };
+        console.log("$scope:",$scope);
+    };
+    
+    $scope.delete=function(index) {
+        $scope.groups.splice(index, 1);
+    };
+
+
+
+
+
+
     $scope.groups = [
         {
             name: 'Jaz Joyne',
