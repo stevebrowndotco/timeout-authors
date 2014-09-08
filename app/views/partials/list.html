@@ -1,16 +1,16 @@
-<div class="page-intro">
+<div class="page-intro clearfix">
 
-    <h2 >You are following({{groups.length}}) categories 
-   
-    </h2>
-    <br class="show-md">
-            <span ng-show="!editing" class="pull-right">
-                <a ng-click="editingClick(true)" class="btn-edit">Edit</a>  
+    <h2 class="pull-left">You are following({{groups.length}}) categories</h2>
+
+    <div class="switch-view pull-right">
+                <span ng-show="!editing" class="pull-right">
+                <a ng-click="editingClick(true)" class="btn-edit glyphicon glyphicon-th-list"></a>
         </span>
         <span ng-show="editing" class="pull-right">
-                <a ng-click="editingClick(false)" class="btn-edit">Close</a>  
+                <a ng-click="editingClick(false)" class="btn-edit glyphicon glyphicon-th-list"></a>
         </span>
-    
+    </div>
+
 </div>
 
 <div class="reader">
@@ -18,13 +18,19 @@
          ng-repeat="group in groups">
 
             <li ng-if="venue.description && venue.image_url" class="panel" ng-repeat="venue in group.content">
+
                 <p class="category">{{group.name}}</p>
-                <div ng-if="venue.image_url" class="thumbnail pull-left"
+
+                <div ng-if="venue.image_url" class="thumbnail clearfix"
                      ng-style="{'background-image' : 'url('+venue.image_url+')'}">
                 </div>
-                <h3>{{venue.name}}</h3>
 
-                <p>{{venue.description}}</p>
+                <div class="content">
+                    <h3>{{venue.name}}</h3>
+
+                    <p>{{venue.description}}</p>
+                </div>
+
             </li>
     </ul>
 </div>

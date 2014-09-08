@@ -6522,16 +6522,15 @@ body {
   background: #f1f1f1;
 }
 .page-intro {
-  margin: 20px 0;
-}
-.page-intro h2 {
+  max-width: 500px;
   border-bottom: 2px solid #000000;
+  margin: 20px auto;
 }
 .reader {
-  max-width: 600px;
+  max-width: 500px;
   margin: auto;
 }
-.panel-group ul {
+.panel-group {
   margin: 0;
   padding: 0;
 }
@@ -6590,12 +6589,16 @@ body {
   border-radius: 0;
 }
 .panel-group .panel .thumbnail {
-  margin-right: 10px;
-  width: 150px;
-  height: 150px;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 250px;
   background-size: cover;
   border: none;
   border-radius: 0;
+}
+.panel-group .panel .content {
+  padding: 20px;
 }
 .panel-group .panel h4 a {
   cursor: pointer;
@@ -6637,7 +6640,16 @@ body {
   color: white;
 }
 .btn-edit {
-  font-size: 12px;
+  display: block;
+}
+.switch-view {
+  font-size: 21px;
+  display: block;
+  margin-top: 22px;
+  cursor: pointer;
+}
+.switch-view a {
+  color: #000000;
 }
 .icon-move {
   width: 30px;
