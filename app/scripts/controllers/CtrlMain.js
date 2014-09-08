@@ -40,7 +40,6 @@ angular.module('myApp.controller', [
             $scope.groups.push(val);
         })
     });
-    $scope.oneAtATime = true;
 
 })
 
