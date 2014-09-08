@@ -8,7 +8,7 @@ body {
   & {
     max-width: 500px;
     border-bottom: 2px solid @black;
-    margin: 20px auto;
+    margin: 0 auto 20px;
   }
 
   h2 {
@@ -38,85 +38,6 @@ body {
       }
     }
 
-    &.node-7087 {
-      .panel-heading {
-        border-left-color: #5DAFBE;
-      }
-    }
-    &.node-7083 {
-      .panel-heading {
-        border-left-color: #FAAA2C;
-      }
-
-    }
-    &.node-7067 {
-      .panel-heading {
-        border-left-color: #FAAA2C;
-      }
-
-    }
-    &.node-7065 {
-      .panel-heading {
-        border-left-color: #ED5471;
-      }
-
-    }
-    &.node-7089 {
-      .panel-heading {
-        border-left-color: #C62744;
-      }
-
-    }
-
-    &.node-7081 {
-      .panel-heading {
-        border-left-color: #1756A0;
-      }
-
-    }
-    &.node-7091 {
-      .panel-heading {
-        border-left-color: #92C160;
-      }
-
-    }
-    &.node-7095 {
-      .panel-heading {
-        border-left-color: #92C160;
-      }
-
-    }
-    &.node-7097 {
-      .panel-heading {
-        border-left-color: #92C160;
-      }
-
-    }
-    &.node-7069 {
-      .panel-heading {
-        border-left-color: #A42B87;
-      }
-
-    }
-    &.node-7073 {
-      .panel-heading {
-        border-left-color: #813087;
-      }
-
-    }
-    &.node-7103 {
-      .panel-heading {
-        border-left-color: #813087;
-      }
-
-    }
-    &.node-7071 {
-      .panel-heading {
-        border-left-color: #00A192;
-      }
-
-    }
-
     .panel-heading {
       background: @white;
       padding: 15px;
@@ -131,6 +52,18 @@ body {
       background-size: cover;
       border: none;
       border-radius: 0;
+      position: relative;
+      .category {
+        position: absolute;
+        display: block;
+        background: red;
+        color: #fff;
+        padding: 3px 5px;
+        border-radius: 5px 5px 0 0;
+        bottom: 0;
+        left: 15px;
+        margin: 0;
+      }
     }
     .content {
       padding: 20px;
@@ -193,3 +126,99 @@ body {
 .ng-hide {
   display: none;
 }
+
+
+//Colors
+
+&.node-7087 {
+  .panel-heading {
+    border-left-color: #5DAFBE;
+  }
+}
+&.node-7083 {
+  .panel-heading {
+    border-left-color: #FAAA2C;
+  }
+
+}
+&.node-7067 {
+  .panel-heading {
+    border-left-color: #FAAA2C;
+  }
+
+}
+&.node-7065 {
+  .panel-heading {
+    border-left-color: #ED5471;
+  }
+
+}
+&.node-7089 {
+  .panel-heading {
+    border-left-color: #C62744;
+  }
+
+}
+
+&.node-7081 {
+  .panel-heading {
+    border-left-color: #1756A0;
+  }
+
+}
+&.node-7091 {
+  .panel-heading {
+    border-left-color: #92C160;
+  }
+
+}
+&.node-7095 {
+  .panel-heading {
+    border-left-color: #92C160;
+  }
+
+}
+&.node-7097 {
+  .panel-heading {
+    border-left-color: #92C160;
+  }
+
+}
+&.node-7069 {
+  .panel-heading {
+    border-left-color: #A42B87;
+  }
+
+}
+&.node-7073 {
+  .panel-heading {
+    border-left-color: #813087;
+  }
+
+}
+&.node-7103 {
+  .panel-heading {
+    border-left-color: #813087;
+  }
+
+}
+&.node-7071 {
+  .panel-heading {
+    border-left-color: #00A192;
+  }
+}
+
+//Color Vars
+@node-7087: #5DAFBE;
+@node-7083: #FAAA2C;
+@node-7067: #FAAA2C;
+@node-7065: #ED5471;
+@node-7089: #C62744;
+@node-7081: #1756A0;
+@node-7091: #92C160;
+@node-7095: #92C160;
+@node-7097: #92C160;
+@node-7069: #A42B87;
+@node-7073: #813087;
+@node-7103: #813087;
+@node-7071: #00A192;
