@@ -45,11 +45,10 @@ angular.module('myApp.controller', [
 })
 
 .controller('GroupController', function ($scope, graffiti) {
-    $scope.onClickRow = function(id) {
-        graffiti.search(id, null, 'posted-at-date', 'en-GB').then(function(response) {
+//    $scope.onClickRow = function(id) {
+        graffiti.search($scope.group.id, null, 'posted-at-date', 'en-GB').then(function(response) {
             $scope.group.content = response.body;
-           
         })
-    };
+//    };
 })
 
