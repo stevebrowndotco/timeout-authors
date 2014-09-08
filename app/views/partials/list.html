@@ -33,12 +33,12 @@
 
 <div> 
       
-    <div ng-show="editing" ui-sortable ng-model="groups" class="panel-group " >
+    <div ng-show="editing" ui-sortable="sortableOptions" ng-model="groups" class="panel-group " >
         <div ng-repeat="group in groups" ng-swipe-left="showActions = true" ng-swipe-right="showActions = false" class=" panel panel-default" ng-class="group.id">
-            <div ng-show="showActions"  class="delete-label" ng-click="delete()">
+            <div ng-show="showActions"  class="delete-label" ng-click="delete($index)">
                 <i class="glyphicon glyphicon-trash glyphicon-delete pull-right"></i> 
             </div>
-            <div class="panel-heading"> 
+            <div class="panel-heading editing"> 
                  <div class="pull-right icon-cointainer ">
                     <div class="align-vertical">
 
