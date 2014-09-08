@@ -33,13 +33,13 @@
             </li>
     </ul>
 </div>
-
+<!--  -->
 
 <div class="reader">
       
     <div ng-show="editing" ui-sortable="sortableOptions" ng-model="groups" class="panel-group " >
-        <div ng-repeat="group in groups" ng-swipe-left="showActions = true" ng-swipe-right="showActions = false" class=" panel panel-default" ng-class="group.id">
-            <div ng-show="showActions"  class="delete-label" ng-click="delete($index)">
+        <div ng-repeat="group in groups" ng-swipe-left="showActionsSwipe  (true,$index)" ng-swipe-right="showActionsSwipe (false)" class=" panel panel-default" ng-class="group.id">
+            <div ng-show="showActions&& groupId==$index" ng-class="{ 'hide-trash' : hideTrash==true }"  class="delete-label" ng-click="delete($index)">
                 <i class="glyphicon glyphicon-trash glyphicon-delete pull-right"></i> 
             </div>
             <div class="panel-heading editing"> 

@@ -6675,3 +6675,7 @@ body {
 .node-7071 .panel-heading {
   border-left-color: #00A192;
 }
+
+.hide-trash{
+  display:none;
+}
