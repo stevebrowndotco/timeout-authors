@@ -47,49 +47,61 @@ $scope.showActionsSwipe=function(bool,groupId) {
             name: 'Jaz Joyne',
             id: "node-7091",
             role: "Editor",
-            image: "jaz.jpeg"
+            image: "jaz.jpeg",
+            category: 'Things to Do'
         },
         {
             name: 'Christina Izzo',
             id: "node-7083",
             role: "Editor",
+            category: 'Food & Drink',
             image: "christina.jpeg"
         },
         {
             name: 'Joshua Rothkopf',
-            id: "node-707",
+            id: "node-7073",
             role: "Editor",
+            category: 'Film',
             image: "josh.jpeg"
         },
         {
             name: 'Giulio De Luise',
             id: 'node-7079',
-            image: 'giulio.jpg'
+            image: 'giulio.jpg',
+            category: 'Music'
         },
         {
             name: 'Jaclyn Bradshaw',
             id: 'node-7089',
+            category: 'Theatre',
             image: 'jaclyn.jpg'
         },
         {
             name: 'Teo Danciu',
-            id: 'node-7091',
-            image: 'teo.jpg'
+            id: 'node-7093',
+            category: 'Travel',
+            image: 'teo.png'
         },
         {
             name: 'Tadas Sasnauskas',
             id: 'node-7065',
+            category: 'Restaurants',
             image: 'tadas.jpg'
         }
     ];
-//    graffiti.search().then(function(response) {
-//        angular.forEach(response.facets[0].children, function(val){
-//            console.log(val);
-//            $scope.groups.push(val);
-//        })
-//    });
 
-})
+//        $scope.cats = []
+//
+//        graffiti.search().then(function (response) {
+//            angular.forEach(response.facets[0].children, function (val) {
+//                $scope.cats.push(val);
+//            })
+//            console.log(JSON.stringify($scope.cats));
+//        });
+
+
+
+    })
 
 .controller('GroupController', function ($scope, graffiti) {
         graffiti.search($scope.group.id, null, 'posted-at-date', 'en-GB').then(function(response) {

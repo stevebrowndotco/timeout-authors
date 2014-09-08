@@ -6530,6 +6530,19 @@ body {
   max-width: 500px;
   margin: auto;
 }
+.reader h3 {
+  text-indent: 40px;
+  line-height: 1.3;
+}
+.reader .author-avatar {
+  top: 14px;
+}
+.reader .content {
+  position: relative;
+}
+.reader .panel {
+  border-bottom: 3px solid red;
+}
 .panel-group {
   margin: 0;
   padding: 0;
@@ -6618,7 +6631,7 @@ body {
 .switch-view {
   font-size: 21px;
   display: block;
-  margin-top: 22px;
+  margin-top: 10px;
   cursor: pointer;
 }
 .switch-view a {
@@ -6635,6 +6648,38 @@ body {
 }
 .ng-hide {
   display: none;
+}
+a.btn-edit {
+  padding: 10px 10px;
+  cursor: pointer;
+}
+.panel-heading .editing {
+  cursor: move;
+}
+.author-list {
+  max-width: 500px;
+  margin: auto;
+}
+.author-list .panel-heading {
+  position: relative;
+}
+.author-list .author-avatar {
+  top: 7px;
+  left: 10px;
+}
+.author-list .panel-title {
+  padding-left: 40px;
+}
+.author-list .panel-title i {
+  font-size: 14px;
+  color: #666;
+}
+.author-avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  position: absolute;
+  background-size: cover;
 }
 .node-7087 .panel-heading {
   border-left-color: #5DAFBE;
