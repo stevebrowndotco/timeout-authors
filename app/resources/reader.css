@@ -6566,7 +6566,7 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 250px;
+  height: 200px;
   background-size: cover;
   border: none;
   border-radius: 0;
@@ -6588,6 +6588,9 @@ body {
 }
 .panel-group .panel h4 a {
   cursor: pointer;
+}
+.panel-group .panel h4 i {
+  font-size: 10px;
 }
 .panel-group .panel h3 {
   font-size: 2.4rem;
