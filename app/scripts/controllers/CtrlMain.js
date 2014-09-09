@@ -129,6 +129,7 @@ angular.module('myApp.controller', [
 .controller('GroupController', function ($scope, graffiti) {
         graffiti.search($scope.group.id, null, 'posted-at-date', 'en-GB').then(function(response) {
             $scope.group.content = response.body;
+            console.log( $scope.group.content)
         })
 })
 

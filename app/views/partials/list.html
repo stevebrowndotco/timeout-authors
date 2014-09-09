@@ -19,13 +19,14 @@
 
             <li ng-if="venue.description && venue.image_url" class="panel reader-panel" ng-class="group.id" ng-repeat="venue in group.content">
 
-                <div ng-if="venue.image_url" class="thumbnail clearfix"
+                <a ng-href="{{venue.to_website}}" target="_blank" ng-if="venue.image_url" class="thumbnail clearfix"
                      ng-style="{'background-image' : 'url('+venue.image_url+')'}">
                     <p class="category">{{group.name}}</p>
-                </div>
+                </a>
 
                 <div class="content">
-                    <div ng-style="{'background-image' : 'url(/user-images/'+group.image+')'}" class="author-avatar"></div> <h3>{{venue.name}}</h3>
+                    <div ng-style="{'background-image' : 'url(/user-images/'+group.image+')'}" class="author-avatar"></div>
+                    <a ng-href="{{venue.to_website}}" target="_blank"><h3>{{venue.name}}</h3></a>
                     <p>{{venue.description}}</p>
                 </div>
 
