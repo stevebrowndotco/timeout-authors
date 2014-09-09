@@ -101,7 +101,7 @@ angular.module('myApp.controller', [
         {
             name: 'Steve Brown',
             id: 'node-7067',
-            category: 'Nightlife',
+            category: 'Bars & Pubs',
             image: 'steve.png'
         },
         {
