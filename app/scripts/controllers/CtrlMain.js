@@ -85,17 +85,42 @@ angular.module('myApp.controller', [
             id: 'node-7065',
             category: 'Restaurants',
             image: 'tadas.jpg'
+        },
+        {
+            name: 'Rob Sworder',
+            id: 'node-7081',
+            category: 'Nightlife',
+            image: 'rob.png'
+        },
+        {
+            name: 'Tomasz Wrobel',
+            id: 'node-7087',
+            category: 'Shopping & Style',
+            image: 'tomasz.jpg'
+        },
+        {
+            name: 'Steve Brown',
+            id: 'node-7067',
+            category: 'Nightlife',
+            image: 'steve.png'
+        },
+        {
+
+            name: 'Daniele Urania',
+            id: 'node-7087',
+            category: 'Hotels',
+            image: 'daniele.jpg'
         }
     ];
 
-//        $scope.cats = []
-//
-//        graffiti.search().then(function (response) {
-//            angular.forEach(response.facets[0].children, function (val) {
-//                $scope.cats.push(val);
-//            })
-//            console.log(JSON.stringify($scope.cats));
-//        });
+        $scope.cats = []
+
+        graffiti.search().then(function (response) {
+            angular.forEach(response.facets[0].children, function (val) {
+                $scope.cats.push(val);
+            })
+            console.log(JSON.stringify($scope.cats));
+        });
 
 
 
